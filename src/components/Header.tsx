@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
                         B
                       </div>
                       <div>
-                        <div>Classic Polish (Best Buy)</div>
+                        <div>Classic Polish (Demo Buy)</div>
                         <div className="text-[10px] opacity-75 font-normal">Blue & Yellow Store Standard</div>
                       </div>
                     </div>
@@ -223,14 +223,14 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo & Category Selector */}
           <div className="flex items-center gap-4">
             <a
-              id="header-bestbuy-logo"
+              id="header-Demobuy-logo"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 onCategorySelect('All Categories');
                 onSearchChange('');
               }}
-              data-testid="bestbuy-logo"
+              data-testid="Demobuy-logo"
               className="flex items-center gap-1 group"
             >
               <div
@@ -240,7 +240,7 @@ export const Header: React.FC<HeaderProps> = ({
                     : 'bg-[#fff200] text-[#0046be]'
                 }`}
               >
-                {isDark ? 'TESTGRID' : 'BEST BUY'}
+                {isDark ? 'TESTGRID' : 'Demo BUY'}
               </div>
               <div className={`hidden lg:flex flex-col text-[10px] uppercase font-bold leading-none tracking-widest pl-1 ${
                 isDark ? 'text-teal-300' : 'text-yellow-300'
