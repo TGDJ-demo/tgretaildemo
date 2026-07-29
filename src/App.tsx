@@ -10,7 +10,6 @@ import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
 import { CompareModal } from './components/CompareModal';
 import { OrderTrackingModal } from './components/OrderTrackingModal';
-import { AIPromptStudioModal } from './components/AIPromptStudioModal';
 import { TestingPlatformToolbar } from './components/TestingPlatformToolbar';
 import { Code, CheckCircle } from 'lucide-react';
 
@@ -56,7 +55,6 @@ export default function App() {
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isOrderTrackingOpen, setIsOrderTrackingOpen] = useState(false);
-  const [isPromptStudioOpen, setIsPromptStudioOpen] = useState(false);
   const [selectedProductForModal, setSelectedProductForModal] = useState<Product | null>(null);
 
   // QA & Demo Toolbar State
@@ -262,15 +260,11 @@ export default function App() {
         onOpenCart={() => setIsCartOpen(true)}
         onOpenCompare={() => setIsCompareOpen(true)}
         onOpenOrderTracking={() => setIsOrderTrackingOpen(true)}
-        onOpenPromptStudio={() => setIsPromptStudioOpen(true)}
         highlightTestIDs={highlightTestIDs}
         onToggleHighlightTestIDs={() => setHighlightTestIDs(!highlightTestIDs)}
         theme={theme}
         onThemeChange={setTheme}
       />
-
-      {/* Deals & AI Prompt Banner */}
-      <DealsBanner onOpenPromptStudio={() => setIsPromptStudioOpen(true)} isDark={isDark} />
 
       {/* Main Body Container */}
       <main id="main-content-layout" className="max-w-7xl w-full mx-auto px-4 py-6 flex-1 flex flex-col lg:flex-row gap-6">
@@ -336,16 +330,6 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-4 flex-wrap">
-              <button
-                id="footer-prompt-studio-btn"
-                data-testid="footer-prompt-studio-btn"
-                onClick={() => setIsPromptStudioOpen(true)}
-                className={`font-bold flex items-center gap-1 cursor-pointer hover:underline ${
-                  isDark ? 'text-teal-300' : 'text-[#fff200]'
-                }`}
-              >
-                <Code className="w-4 h-4" /> AI Prompt Studio (Google AI Studio & DeepSeek)
-              </button>
               <span>|</span>
               <button
                 id="footer-track-order-btn"
@@ -432,12 +416,6 @@ export default function App() {
         isOpen={isOrderTrackingOpen}
         onClose={() => setIsOrderTrackingOpen(false)}
         recentOrders={recentOrders}
-        isDark={isDark}
-      />
-
-      <AIPromptStudioModal
-        isOpen={isPromptStudioOpen}
-        onClose={() => setIsPromptStudioOpen(false)}
         isDark={isDark}
       />
 
