@@ -185,17 +185,17 @@ export const Header: React.FC<HeaderProps> = ({
 
             <span className="text-gray-600">|</span>
 
-            <button
-              id="header-prompt-studio-btn"
-              data-testid="header-prompt-studio-btn"
-              onClick={onOpenPromptStudio}
-              className={`flex items-center gap-1.5 font-bold hover:underline ${
-                isDark ? 'text-pink-400' : 'text-[#ffe000]'
-              }`}
-            >
-              <Code className="w-3.5 h-3.5" />
-              AI Prompt Studio
-            </button>
+           / <button
+            /  id="header-prompt-studio-btn"
+             / data-testid="header-prompt-studio-btn"
+             / onClick={onOpenPromptStudio}
+             / className={`flex items-center gap-1.5 font-bold hover:underline ${
+             /   isDark ? 'text-pink-400' : 'text-[#ffe000]'
+             / }`}
+           / >
+           /   <Code className="w-3.5 h-3.5" />
+           /   AI Prompt Studio
+           / </button>
             <span className="text-gray-600">|</span>
             <button
               id="header-track-order-btn"
