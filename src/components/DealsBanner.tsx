@@ -2,7 +2,6 @@ import React from 'react';
 import { Flame, Clock, ShieldCheck, Truck, RotateCcw, Sparkles } from 'lucide-react';
 
 interface DealsBannerProps {
-  onOpenPromptStudio: () => void;
   isDark?: boolean;
 }
 
@@ -67,20 +66,6 @@ export const DealsBanner: React.FC<DealsBannerProps> = ({ onOpenPromptStudio, is
             <RotateCcw className={`w-4 h-4 ${isDark ? 'text-teal-400' : 'text-yellow-400'}`} />
             <span>15-Day Free Returns</span>
           </div>
-
-          <button
-            id="banner-prompt-generator-btn"
-            onClick={onOpenPromptStudio}
-            data-testid="banner-prompt-generator-btn"
-            className={`text-xs font-black px-3 py-1.5 rounded flex items-center gap-1.5 transition-transform hover:scale-105 active:scale-95 shadow-sm ${
-              isDark
-                ? 'bg-gradient-to-r from-teal-400 to-cyan-400 text-black shadow-[0_0_12px_rgba(0,245,212,0.5)]'
-                : 'bg-[#ffe000] hover:bg-yellow-300 text-black'
-            }`}
-          >
-            <Sparkles className="w-3.5 h-3.5 text-black" />
-            <span>Copy AI Studio Prompt</span>
-          </button>
         </div>
       </div>
     </div>
