@@ -10,7 +10,6 @@ import {
   ChevronDown,
   PackageCheck,
   Tag,
-  Code,
   Palette,
   Check
 } from 'lucide-react';
@@ -28,7 +27,6 @@ interface HeaderProps {
   onOpenCart: () => void;
   onOpenCompare: () => void;
   onOpenOrderTracking: () => void;
-  onOpenPromptStudio: () => void;
   highlightTestIDs: boolean;
   onToggleHighlightTestIDs: () => void;
   theme: ThemeMode;
@@ -46,7 +44,6 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenCart,
   onOpenCompare,
   onOpenOrderTracking,
-  onOpenPromptStudio,
   theme,
   onThemeChange
 }) => {
@@ -183,20 +180,6 @@ export const Header: React.FC<HeaderProps> = ({
               )}
             </div>
 
-            <span className="text-gray-600">|</span>
-
-           / <button
-            /  id="header-prompt-studio-btn"
-             / data-testid="header-prompt-studio-btn"
-             / onClick={onOpenPromptStudio}
-             / className={`flex items-center gap-1.5 font-bold hover:underline ${
-             /   isDark ? 'text-pink-400' : 'text-[#ffe000]'
-             / }`}
-           / >
-           /   <Code className="w-3.5 h-3.5" />
-           /   AI Prompt Studio
-           / </button>
-            <span className="text-gray-600">|</span>
             <button
               id="header-track-order-btn"
               data-testid="header-track-order-btn"
