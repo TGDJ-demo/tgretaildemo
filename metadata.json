@@ -1,0 +1,6 @@
+{
+  "name": "Best Buy E-Commerce Demo & Prompt Studio",
+  "description": "Functional Best Buy clone demo app with mock checkout and test automation hooks, plus AI prompt templates for Google AI Studio & DeepSeek.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
